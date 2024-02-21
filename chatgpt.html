@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="chatgpt.css" />
+  </head>
+  <body>
+    <h1>Will you send me some food?</h1>
+    <button id="yes" onclick="handleButtonClick('yes')">Yes</button>
+    <button id="no" onclick="handleButtonClick('no')">No</button>
+
+    <script>
+      //   function handleButtonClick(buttonId) {
+      //     // Check which button was clicked
+      //     if (buttonId === "yes") {
+      //       // Redirect to a different page for Button 2
+      //       window.location.href = "happy.html";
+      //     } else {
+      //       var button1 = document.getElementById("no");
+      //       var button2 = document.getElementById("yes");
+
+      //       // Perform some other action for Button 2 (not redirecting in this example)
+      //       function handleButtonClick() {
+      //         // Get the current font size (parse it to an integer)
+      //         var currentFontSize1 = parseInt(
+      //           window.getComputedStyle(button1).fontSize
+      //         );
+      //         var currentWidth1 = parseInt(
+      //           window.getComputedStyle(button1).width
+      //         );
+      //         var currentFontSize2 = parseInt(
+      //           window.getComputedStyle(button2).fontSize
+      //         );
+      //         var currentWidth2 = parseInt(
+      //           window.getComputedStyle(button2).width
+      //         );
+
+      //         // Increase the font size after clicking
+      //         button1.style.fontSize = currentFontSize1 - 0.025 + "px";
+      //         button1.style.width = currentWidth1 - 3 + "px";
+      //         button2.style.fontSize = currentFontSize2 + 6 + "px";
+      //         button2.style.width = currentWidth2 + 9 + "px";
+      //       }
+      //     }
+      //   }
+      var button1 = document.getElementById("no");
+      var button2 = document.getElementById("yes");
+
+      function handleButtonClick(buttonId) {
+        if (buttonId === "yes") {
+          // Redirect to a different page for Button 2
+          window.location.href = "happy.html";
+          alert("Thank Youuuu!!!");
+        } else {
+          // Perform some other action for Button 1
+          // Get the current font size and width (parse to integer)
+          var currentFontSize1 = parseInt(
+            window.getComputedStyle(button1).fontSize
+          );
+          var currentWidth1 = parseInt(window.getComputedStyle(button1).width);
+
+          // Get the current font size and width for Button 2
+          var currentFontSize2 = parseInt(
+            window.getComputedStyle(button2).fontSize
+          );
+          var currentWidth2 = parseInt(window.getComputedStyle(button2).width);
+
+          // Increase the font size and width for Button 2
+          button2.style.fontSize = currentFontSize2 + 6 + "px";
+          button2.style.width = currentWidth2 + 9 + "px";
+
+          // Decrease the font size and width for Button 1
+          button1.style.fontSize = currentFontSize1 - 0.025 + "px";
+          button1.style.width = currentWidth1 - 3 + "px";
+        }
+      }
+    </script>
+  </body>
+</html>
